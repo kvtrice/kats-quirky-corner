@@ -1,0 +1,60 @@
+@use "./partials/mixins" as m;
+@use "./partials/variables" as v;
+@use "./partials/breakpoints" as b;
+@import "../css/normalize.css";
+
+// Global Styles
+html {
+	font-family: v.$primary-font;
+}
+
+a {
+	color: v.$primary-text;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.header {
+	padding: 1rem;
+	background-color: v.$primary-bg;
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.5rem;
+
+		&__link {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&--accent {
+			font-family: v.$accent-font;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 2rem;
+
+		&__links {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.nav {
+	&__list {
+		display: flex;
+		gap: 2rem;
+
+		&__item {
+			list-style: none;
+		}
+	}
+}
