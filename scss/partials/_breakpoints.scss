@@ -2,13 +2,13 @@ $mobile: 800px;
 $tablet: 1024px;
 
 @mixin mobile-breakpoint {
-	@media screen and (min-width: $mobile) {
+	@media screen and (max-width: $mobile) {
 		@content;
 	}
 }
 
 @mixin tablet-breakpoint {
-	@media screen and (min-width: $tablet) {
+	@media screen and (max-width: $tablet) {
 		@content;
 	}
 }

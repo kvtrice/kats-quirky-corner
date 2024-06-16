@@ -8,6 +8,19 @@ html {
 	font-family: v.$primary-font;
 }
 
+section {
+	text-align: center;
+	@include m.flex-center;
+	padding: 2rem;
+	border-bottom: 1px solid v.$primary-text;
+}
+
+header,
+footer {
+	padding: 1rem;
+	background-color: v.$primary-bg;
+}
+
 a {
 	color: v.$primary-text;
 	text-decoration: none;
@@ -18,8 +31,7 @@ a {
 }
 
 .header {
-	padding: 1rem;
-	background-color: v.$primary-bg;
+	border-bottom: 1px solid v.$primary-text;
 
 	&__title {
 		font-weight: bold;
@@ -31,8 +43,10 @@ a {
 			}
 		}
 
-		&--accent {
-			font-family: v.$accent-font;
+		&__content {
+			&--accent {
+				font-family: v.$accent-font;
+			}
 		}
 	}
 
@@ -44,6 +58,10 @@ a {
 		&__links {
 			display: flex;
 			align-items: center;
+
+			@include b.mobile-breakpoint {
+				display: none;
+			}
 		}
 	}
 }
@@ -55,6 +73,71 @@ a {
 
 		&__item {
 			list-style: none;
+		}
+	}
+}
+
+.explore {
+	&__tiles {
+		@include m.flex-center($direction: row);
+
+		@include b.mobile-breakpoint {
+			flex-direction: column;
+		}
+	}
+}
+
+.tile {
+	border: 1px solid v.$primary-text;
+	height: 100px;
+	width: 100px;
+	margin: 1rem;
+
+	&__nav {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+
+	@include b.mobile-breakpoint {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.2rem;
+
+		&__link {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&__content {
+			&--accent {
+				font-family: v.$accent-font;
+			}
+		}
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.8rem;
+		padding: 0;
+
+		@include b.mobile-breakpoint {
+			text-align: center;
 		}
 	}
 }
