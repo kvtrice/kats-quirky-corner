@@ -37,9 +37,11 @@
 						href="./index.html"
 						class="header__title__link"
 					>
-						<p>
+						<p class="header__title__content">
 							Kat's
-							<span class="header__title--accent">Quirky</span>
+							<span class="header__title__content--accent"
+								>Quirky</span
+							>
 							Corner
 						</p>
 					</a>
@@ -74,15 +76,100 @@
 
 		<main>
 			<!-- Hero Section -->
-			<section></section>
+			<section class="hero">
+				<div class="hero__bg">
+					<h1 class="hero__heading">Welcome to the Quirky Corner</h1>
+					<p class="hero__subtext">Where the fun never stops</p>
+					<a href="#explore"
+						><button class="btn">Start Exploring</button></a
+					>
+				</div>
+			</section>
 
 			<!-- Joke of the day Section -->
-			<section></section>
+			<section class="joke">
+				<h2 class="joke__heading">Joke of the day 🤭</h2>
+				<button class="btn">Click to get today's joke</button>
+				<div class="joke__response"></div>
+			</section>
 
-			<!-- Tiles Section -->
-			<section></section>
+			<!-- Explore Section -->
+			<section
+				class="explore"
+				id="explore"
+			>
+				<h2 class="explore__heading">Explore the corner</h2>
+				<div class="explore__tiles">
+					<a
+						href="./pages/quiz.html"
+						class="tile__nav"
+					>
+						<div class="tile">
+							<p>Quiz</p>
+						</div>
+					</a>
+					<a
+						href="./pages/book.html"
+						class="tile__nav"
+					>
+						<div class="tile">
+							<p>Book</p>
+						</div>
+					</a>
+					<a
+						href="./pages/tunes.html"
+						class="tile__nav"
+					>
+						<div class="tile">
+							<p>Tunes</p>
+						</div>
+					</a>
+				</div>
+			</section>
 		</main>
 
-		<footer></footer>
+		<footer>
+			<div class="footer">
+				<div class="footer__title">
+					<a
+						href="./index.html"
+						class="footer__title__link"
+					>
+						<p class="footer__title__content">
+							Kat's
+							<span class="footer__title__content--accent"
+								>Quirky</span
+							>
+							Corner
+						</p>
+					</a>
+				</div>
+				<div class="footer__links">
+					<ul class="footer__list">
+						<li class="footer__list__item">
+							<a
+								href="./pages/book.html"
+								class="footer__list__link"
+								>Book Recommender</a
+							>
+						</li>
+						<li class="footer__list__item">
+							<a
+								href="./pages/quiz.html"
+								class="footer__list__link"
+								>Pokemon Quiz</a
+							>
+						</li>
+						<li class="footer__list__item">
+							<a
+								href="./pages/tunes.html"
+								class="footer__list__link"
+								>Disney Tunes</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
